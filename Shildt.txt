@@ -1,3 +1,16 @@
-Глава 7 стр 194 Ключевое слово static
+Глава 8 стр 210 Наследование
 
 К лекции 2
+- Имеется код
+    public static void main(String args[]) {
+            String strOb1 = "First String";
+            String strOb2 = "Second String";
+            String strOb3 = strOb1 + " and " + strOb2;
+
+            System.out.println(strOb1);
+            System.out.println(strOb2);
+            System.out.println(strOb3);
+        }
+
+    как вывести не строковое представление а такое java.lang.Object@60e53b93
+    для того чтобы посмотеть разные эти объекты или нет
