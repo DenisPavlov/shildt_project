@@ -1,29 +1,32 @@
 package chapter8;
 
-// Using super to overcome name hiding.
-class A {
-    int i;
+// A Simple demonstration of abstract.
+abstract class A {
+    static void show() {
+        System.out.println("Show");
+    }
+    abstract void callme();
+
+    // concrete methods are still allowed in abstract classes
+    void callmetoo() {
+        System.out.println("This is a concrete method.");
+    }
 }
 
-// Create a subclass by extending class A.
 class B extends A {
-    int i; // this i hides the i in A
-
-    B(int a, int b) {
-        super.i = a; // i in A
-        i = b; // i in B
-    }
-
-    void show() {
-        System.out.println("i in superclass: " + super.i);
-        System.out.println("i in subclass: " + i);
+    void callme() {
+        System.out.println("B's implementation of callme.");
     }
 }
 
-class UseSuper {
+class AbstractDemo {
     public static void main(String args[]) {
-        B subOb = new B(1, 2);
+        B b = new B();
+        B.show();
+        A.show();
 
-        subOb.show();
+        b.callme();
+        b.callmetoo();
     }
 }
+
