@@ -26,9 +26,12 @@ class StreamDemo {
 
         // Obtain the minimum and maximum value by uses of min(),
         // max(), isPresent(), and get().
-        Optional<Integer> minVal = myStream.min(Integer::compare);
-        if(minVal.isPresent()) System.out.println("Minimum value: " +
-                minVal.get());
+//        Optional<Integer> minVal = myStream.min(Integer::compare);
+//        if(minVal.isPresent()) System.out.println("Minimum value: " +
+//                minVal.get());
+
+        int i = myStream.reduce(100, (a,b)-> a+b);
+        System.out.println("sum = " + i);
 
         // Must obtain a new stream because previous call to min()
         // is a terminal operation that consumed the stream.
