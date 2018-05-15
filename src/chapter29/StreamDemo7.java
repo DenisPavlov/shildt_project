@@ -1,7 +1,6 @@
 package chapter29;
 
-// Use map() to create a new stream that contains only
-// selected aspects of the original stream.
+// Use collect() to create a List and a Set from a stream.
 
 import java.util.*;
 import java.util.stream.*;
@@ -28,7 +27,7 @@ class NamePhone {
     }
 }
 
-class StreamDemo5 {
+class StreamDemo7 {
 
     public static void main(String[] args) {
 
@@ -42,21 +41,29 @@ class StreamDemo5 {
         myList.add(new NamePhoneEmail("Mary", "555-3333",
                 "Mary@HerbSchildt.com"));
 
-        System.out.println("Original values in myList: ");
-        myList.stream().forEach( (a) -> {
-            System.out.println(a.name + " " + a.phonenum + " " + a.email);
-        });
-        System.out.println();
-
         // Map just the names and phone numbers to a new stream.
         Stream<NamePhone> nameAndPhone = myList.stream().map(
                 (a) -> new NamePhone(a.name,a.phonenum)
         );
 
-        System.out.println("List of names and phone numbers: ");
-        nameAndPhone.forEach( (a) -> {
-            System.out.println(a.name + " " + a.phonenum);
-        });
+        // Use collect to create a List of the names and phone numbers.
+        List<NamePhone> npList = nameAndPhone.collect(Collectors.toList());
+
+        System.out.println("Names and phone numbers in a List:");
+        for(NamePhone e : npList)
+            System.out.println(e.name + ": " + e.phonenum);
+
+        // Obtain another mapping of the names and phone numbers.
+        nameAndPhone = myList.stream().map(
+                (a) -> new NamePhone(a.name,a.phonenum)
+        );
+
+        // Now, create a Set by use of collect().
+        Set<NamePhone> npSet = nameAndPhone.collect(Collectors.toSet());
+
+        System.out.println("\nNames and phone numbers in a Set:");
+        for(NamePhone e : npSet)
+            System.out.println(e.name + ": " + e.phonenum);
     }
 }
 
