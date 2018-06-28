@@ -18,3 +18,9 @@ Stream API
     Skype: vladimir.ivanov_am (Send message) (Call)
     Email: vladimir.ivanov@digital-ecosystems.ru (Send email)
     Телефон: +79137834791 (Call)
+
+    Иванов Владимир Александрович
+
+    Отдел: Информационно-аналитический отдел
+    Должность: Начальник информационно-аналитического отдела
+    Статус: Chief
