@@ -1,4 +1,4 @@
-Глава 17 стр 498 Пакет java.lang
+Глава 17 стр 526 Класс ProcessBuilder
 
 К лекции 6
 - почему не компилируется Consumer<Integer> consumer1 = (int i) -> {};
