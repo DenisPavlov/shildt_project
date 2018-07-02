@@ -1,4 +1,4 @@
-Глава 17 стр 526 Класс ProcessBuilder
+Глава 17 стр 536 Класс Class
 
 К лекции 6
 - почему не компилируется Consumer<Integer> consumer1 = (int i) -> {};
