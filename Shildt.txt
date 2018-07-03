@@ -1,4 +1,4 @@
-Глава 17 стр 536 Класс Class
+Глава 18 стр 564 Collection Framework, часть 1
 
 К лекции 6
 - почему не компилируется Consumer<Integer> consumer1 = (int i) -> {};
