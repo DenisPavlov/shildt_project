@@ -1,4 +1,4 @@
-Глава 18 стр 575 Интерфейс NavigableSet
+Глава 18 стр 588 Класс TreeSet
 
 К лекции 6
 - почему не компилируется Consumer<Integer> consumer1 = (int i) -> {};
