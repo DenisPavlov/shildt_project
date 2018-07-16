@@ -1,4 +1,4 @@
-Глава 19 стр 660 Класс Date
+Глава 19 стр 668 Класс SimpleTimeZone
 
 К лекции 6
 - почему не компилируется Consumer<Integer> consumer1 = (int i) -> {};
